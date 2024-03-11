@@ -1,0 +1,1140 @@
+Program.Sub.ScreenSU.Start
+Gui.Form1..create
+Gui.Form1..caption("Part Label Maintenance")
+Gui.Form1..size(4080,7350)
+Gui.Form1..minx(0)
+Gui.Form1..miny(0)
+Gui.Form1..position(0,0)
+Gui.Form1..event(UnLoad,form1_unload)
+Gui.Form1..alwaysontop(False)
+Gui.Form1..fontname("Arial")
+Gui.Form1..fontsize(8)
+Gui.Form1..forecolor(0)
+Gui.Form1..fontstyle(,,)
+Gui.Form1..BackColor(-2147483633)
+Gui.Form1..controlbox(True)
+Gui.Form1..maxbutton(True)
+Gui.Form1..minbutton(True)
+Gui.Form1..mousepointer(0)
+Gui.Form1..moveable(True)
+Gui.Form1..sizeable(False)
+Gui.Form1..ShowInTaskBar(True)
+Gui.Form1..titlebar(True)
+Gui.Form1.txtPart.create(textbox,"",True,2235,300,0,200,300,True,0,Arial,8,-2147483643,1)
+Gui.Form1.txtPart.event(LostFocus,txtpart_lostfocus)
+Gui.Form1.txtPart.defaultvalue("")
+Gui.Form1.txtPart.controlgroup(0)
+Gui.Form1.txtPart.tabstop(True)
+Gui.Form1.txtPart.tabindex(1)
+Gui.Form1.lbl1.create(label,"PART",True,1935,255,1,200,100,True,0,Arial,8,-2147483633,0)
+Gui.Form1.lbl1.defaultvalue("")
+Gui.Form1.lbl1.controlgroup(0)
+Gui.Form1.cmdBrowsPart.create(button)
+Gui.Form1.cmdBrowsPart.caption("^")
+Gui.Form1.cmdBrowsPart.visible(True)
+Gui.Form1.cmdBrowsPart.size(525,315)
+Gui.Form1.cmdBrowsPart.zorder(0)
+Gui.Form1.cmdBrowsPart.position(2600,300)
+Gui.Form1.cmdBrowsPart.enabled(True)
+Gui.Form1.cmdBrowsPart.fontname("Arial")
+Gui.Form1.cmdBrowsPart.fontsize(8)
+Gui.Form1.cmdBrowsPart.event(Click,cmdbrowspart_click)
+Gui.Form1.cmdBrowsPart.defaultvalue("")
+Gui.Form1.cmdBrowsPart.controlgroup(0)
+Gui.Form1.cmdBrowsPart.tabstop(True)
+Gui.Form1.cmdBrowsPart.tabindex(2)
+Gui.Form1.txtCut.create(textbox,"",True,1770,300,0,200,800,True,0,Arial,8,-2147483643,1)
+Gui.Form1.txtCut.event(GotFocus,txtcut_gotfocus)
+Gui.Form1.txtCut.event(LostFocus,txtcut_lostfocus)
+Gui.Form1.txtCut.defaultvalue("---")
+Gui.Form1.txtCut.controlgroup(0)
+Gui.Form1.txtCut.tabstop(True)
+Gui.Form1.txtCut.tabindex(3)
+Gui.Form1.lbl2.create(label,"CUT DIAMETER",True,1935,255,1,200,600,True,0,Arial,8,-2147483633,0)
+Gui.Form1.lbl2.defaultvalue("")
+Gui.Form1.lbl2.controlgroup(0)
+Gui.Form1.txtShank.create(textbox,"",True,1770,300,0,200,1300,True,0,Arial,8,-2147483643,1)
+Gui.Form1.txtShank.event(GotFocus,txtshank_gotfocus)
+Gui.Form1.txtShank.event(LostFocus,txtshank_lostfocus)
+Gui.Form1.txtShank.defaultvalue("---")
+Gui.Form1.txtShank.controlgroup(0)
+Gui.Form1.txtShank.tabstop(True)
+Gui.Form1.txtShank.tabindex(4)
+Gui.Form1.lbl3.create(label,"SHANK DIAMETER",True,1935,240,1,200,1115,True,0,Arial,8,-2147483633,0)
+Gui.Form1.lbl3.defaultvalue("")
+Gui.Form1.lbl3.controlgroup(0)
+Gui.Form1.txtFlutes.create(textbox,"",True,1770,300,0,200,1800,True,0,Arial,8,-2147483643,1)
+Gui.Form1.txtFlutes.event(GotFocus,txtflutes_gotfocus)
+Gui.Form1.txtFlutes.event(LostFocus,txtflutes_lostfocus)
+Gui.Form1.txtFlutes.defaultvalue("---")
+Gui.Form1.txtFlutes.controlgroup(0)
+Gui.Form1.txtFlutes.tabstop(True)
+Gui.Form1.txtFlutes.tabindex(5)
+Gui.Form1.lbl4.create(label,"FLUTES",True,1935,210,1,200,1600,True,0,Arial,8,-2147483633,0)
+Gui.Form1.lbl4.defaultvalue("")
+Gui.Form1.lbl4.controlgroup(0)
+Gui.Form1.txtLengthCut.create(textbox,"",True,1770,300,0,200,2300,True,0,Arial,8,-2147483643,1)
+Gui.Form1.txtLengthCut.event(GotFocus,txtlengthcut_gotfocus)
+Gui.Form1.txtLengthCut.event(LostFocus,txtlengthcut_lostfocus)
+Gui.Form1.txtLengthCut.defaultvalue("---")
+Gui.Form1.txtLengthCut.controlgroup(0)
+Gui.Form1.txtLengthCut.tabstop(True)
+Gui.Form1.txtLengthCut.tabindex(6)
+Gui.Form1.lbl5.create(label,"LENGTH OF CUT",True,1935,255,1,200,2100,True,0,Arial,8,-2147483633,0)
+Gui.Form1.lbl5.defaultvalue("")
+Gui.Form1.lbl5.controlgroup(0)
+Gui.Form1.txtRadAngle.create(textbox,"",True,1770,300,0,200,2800,True,0,Arial,8,-2147483643,1)
+Gui.Form1.txtRadAngle.event(GotFocus,txtradangle_gotfocus)
+Gui.Form1.txtRadAngle.event(LostFocus,txtradangle_lostfocus)
+Gui.Form1.txtRadAngle.defaultvalue("---")
+Gui.Form1.txtRadAngle.controlgroup(0)
+Gui.Form1.txtRadAngle.tabstop(True)
+Gui.Form1.txtRadAngle.tabindex(7)
+Gui.Form1.lbl6.create(label,"RAD/ANGLE",True,1935,255,1,200,2600,True,0,Arial,8,-2147483633,0)
+Gui.Form1.lbl6.defaultvalue("")
+Gui.Form1.lbl6.controlgroup(0)
+Gui.Form1.txtOAL.create(textbox,"",True,1770,300,0,200,3300,True,0,Arial,8,-2147483643,1)
+Gui.Form1.txtOAL.event(GotFocus,txtoal_gotfocus)
+Gui.Form1.txtOAL.event(LostFocus,txtoal_lostfocus)
+Gui.Form1.txtOAL.defaultvalue("---")
+Gui.Form1.txtOAL.controlgroup(0)
+Gui.Form1.txtOAL.tabstop(True)
+Gui.Form1.txtOAL.tabindex(8)
+Gui.Form1.lbl7.create(label,"OAL",True,1935,255,1,200,3100,True,0,Arial,8,-2147483633,0)
+Gui.Form1.lbl7.defaultvalue("")
+Gui.Form1.lbl7.controlgroup(0)
+Gui.Form1.lbl8.create(label,"COATING",True,1935,255,1,200,3600,True,0,Arial,8,-2147483633,0)
+Gui.Form1.lbl8.defaultvalue("")
+Gui.Form1.lbl8.controlgroup(0)
+Gui.Form1.txtLbs.create(textbox,"",True,1770,300,0,195,4320,True,0,Arial,8,-2147483643,1)
+Gui.Form1.txtLbs.event(GotFocus,txtlbs_gotfocus)
+Gui.Form1.txtLbs.defaultvalue("---")
+Gui.Form1.txtLbs.controlgroup(0)
+Gui.Form1.txtLbs.tabstop(True)
+Gui.Form1.txtLbs.tabindex(10)
+Gui.Form1.lbl9.create(label,"LBS",True,1965,180,1,200,4145,True,0,Arial,8,-2147483633,0)
+Gui.Form1.lbl9.defaultvalue("")
+Gui.Form1.lbl9.controlgroup(0)
+Gui.Form1.txtCPN.create(textbox,"",True,1770,300,0,200,4800,True,0,Arial,8,-2147483643,1)
+Gui.Form1.txtCPN.event(GotFocus,txtcpn_gotfocus)
+Gui.Form1.txtCPN.maxLength(12)
+Gui.Form1.txtCPN.defaultvalue("---")
+Gui.Form1.txtCPN.controlgroup(0)
+Gui.Form1.txtCPN.tabstop(True)
+Gui.Form1.txtCPN.tabindex(11)
+Gui.Form1.lbl10.create(label,"CUSTOMER P/N",True,1935,255,1,200,4600,True,0,Arial,8,-2147483633,0)
+Gui.Form1.lbl10.defaultvalue("")
+Gui.Form1.lbl10.controlgroup(0)
+Gui.Form1.cmdSave.create(button)
+Gui.Form1.cmdSave.caption("Save/Update")
+Gui.Form1.cmdSave.visible(True)
+Gui.Form1.cmdSave.size(1200,375)
+Gui.Form1.cmdSave.zorder(0)
+Gui.Form1.cmdSave.position(200,6200)
+Gui.Form1.cmdSave.enabled(True)
+Gui.Form1.cmdSave.fontname("Arial")
+Gui.Form1.cmdSave.fontsize(8)
+Gui.Form1.cmdSave.event(Click,cmdsave_click)
+Gui.Form1.cmdSave.defaultvalue("")
+Gui.Form1.cmdSave.controlgroup(0)
+Gui.Form1.cmdSave.tabstop(True)
+Gui.Form1.cmdSave.tabindex(14)
+Gui.Form1.cmdDelete.create(button)
+Gui.Form1.cmdDelete.caption("Delete")
+Gui.Form1.cmdDelete.visible(True)
+Gui.Form1.cmdDelete.size(1000,375)
+Gui.Form1.cmdDelete.zorder(0)
+Gui.Form1.cmdDelete.position(1500,6200)
+Gui.Form1.cmdDelete.enabled(True)
+Gui.Form1.cmdDelete.fontname("Arial")
+Gui.Form1.cmdDelete.fontsize(8)
+Gui.Form1.cmdDelete.event(Click,cmddelete_click)
+Gui.Form1.cmdDelete.defaultvalue("")
+Gui.Form1.cmdDelete.controlgroup(0)
+Gui.Form1.cmdDelete.tabstop(True)
+Gui.Form1.cmdDelete.tabindex(15)
+Gui.Form1.cmdClear.create(button)
+Gui.Form1.cmdClear.caption("Clear")
+Gui.Form1.cmdClear.visible(True)
+Gui.Form1.cmdClear.size(1000,375)
+Gui.Form1.cmdClear.zorder(0)
+Gui.Form1.cmdClear.position(2600,6200)
+Gui.Form1.cmdClear.enabled(True)
+Gui.Form1.cmdClear.fontname("Arial")
+Gui.Form1.cmdClear.fontsize(8)
+Gui.Form1.cmdClear.event(Click,cmdclear_click)
+Gui.Form1.cmdClear.defaultvalue("")
+Gui.Form1.cmdClear.controlgroup(0)
+Gui.Form1.cmdClear.tabstop(True)
+Gui.Form1.cmdClear.tabindex(16)
+Gui.Form1.ddlCoating.create(dropdownlist)
+Gui.Form1.ddlCoating.visible(True)
+Gui.Form1.ddlCoating.size(2205,330)
+Gui.Form1.ddlCoating.zorder(0)
+Gui.Form1.ddlCoating.position(200,3800)
+Gui.Form1.ddlCoating.enabled(True)
+Gui.Form1.ddlCoating.fontname("Arial")
+Gui.Form1.ddlCoating.fontsize(8)
+Gui.Form1.ddlCoating.defaultvalue("")
+Gui.Form1.ddlCoating.controlgroup(0)
+Gui.Form1.ddlCoating.tabstop(True)
+Gui.Form1.ddlCoating.tabindex(9)
+Gui.Form1.txtCPN_2.create(textbox,"",True,1770,300,0,200,5300,True,0,Arial,8,-2147483643,1)
+Gui.Form1.txtCPN_2.event(GotFocus,txtcpn_2_gotfocus)
+Gui.Form1.txtCPN_2.maxLength(13)
+Gui.Form1.txtCPN_2.defaultvalue("---")
+Gui.Form1.txtCPN_2.controlgroup(0)
+Gui.Form1.txtCPN_2.tabstop(True)
+Gui.Form1.txtCPN_2.tabindex(12)
+Gui.Form1.lbl11.create(label,"CUSTOMER P/N(2)",True,1935,255,1,200,5100,True,0,Arial,8,-2147483633,0)
+Gui.Form1.lbl11.defaultvalue("")
+Gui.Form1.lbl11.controlgroup(0)
+Gui.Form1.txtREV.create(textbox,"",True,1785,300,0,200,5800,True,0,Arial,8,-2147483643,1)
+Gui.Form1.txtREV.event(GotFocus,txtrev_gotfocus)
+Gui.Form1.txtREV.defaultvalue("")
+Gui.Form1.txtREV.controlgroup(0)
+Gui.Form1.txtREV.tabstop(True)
+Gui.Form1.txtREV.tabindex(13)
+Gui.Form1.lbl12.create(label,"EMPTY DATA",True,1965,180,1,200,5600,True,0,Arial,8,-2147483633,0)
+Gui.Form1.lbl12.defaultvalue("")
+Gui.Form1.lbl12.controlgroup(0)
+Gui.Form1.cmdAddCoatScreen.create(button)
+Gui.Form1.cmdAddCoatScreen.caption("Add New")
+Gui.Form1.cmdAddCoatScreen.visible(True)
+Gui.Form1.cmdAddCoatScreen.size(855,375)
+Gui.Form1.cmdAddCoatScreen.zorder(0)
+Gui.Form1.cmdAddCoatScreen.position(2600,3800)
+Gui.Form1.cmdAddCoatScreen.enabled(True)
+Gui.Form1.cmdAddCoatScreen.fontname("Arial")
+Gui.Form1.cmdAddCoatScreen.fontsize(8)
+Gui.Form1.cmdAddCoatScreen.event(Click,cmdaddcoatscreen_click)
+Gui.Form1.cmdAddCoatScreen.defaultvalue("")
+Gui.Form1.cmdAddCoatScreen.controlgroup(0)
+Gui.Form2..create
+Gui.Form2..caption("Add/Remove Coating")
+Gui.Form2..size(3645,1965)
+Gui.Form2..minx(0)
+Gui.Form2..miny(0)
+Gui.Form2..position(0,0)
+Gui.Form2..event(UnLoad,form2_unload)
+Gui.Form2..alwaysontop(False)
+Gui.Form2..fontname("Arial")
+Gui.Form2..fontsize(8)
+Gui.Form2..forecolor(0)
+Gui.Form2..fontstyle(,,)
+Gui.Form2..BackColor(-2147483633)
+Gui.Form2..controlbox(True)
+Gui.Form2..maxbutton(True)
+Gui.Form2..minbutton(True)
+Gui.Form2..mousepointer(0)
+Gui.Form2..moveable(True)
+Gui.Form2..sizeable(False)
+Gui.Form2..ShowInTaskBar(True)
+Gui.Form2..titlebar(True)
+Gui.Form2.txtCoat.create(textbox,"",True,2190,300,0,100,300,True,0,Arial,8,-2147483643,1)
+Gui.Form2.txtCoat.maxLength(50)
+Gui.Form2.txtCoat.defaultvalue("")
+Gui.Form2.txtCoat.controlgroup(0)
+Gui.Form2.lbl1.create(label,"Coating",True,1995,255,1,140,100,True,0,Arial,8,-2147483633,0)
+Gui.Form2.lbl1.defaultvalue("")
+Gui.Form2.lbl1.controlgroup(0)
+Gui.Form2.cmdAddCoat.create(button)
+Gui.Form2.cmdAddCoat.caption("Save")
+Gui.Form2.cmdAddCoat.visible(True)
+Gui.Form2.cmdAddCoat.size(855,375)
+Gui.Form2.cmdAddCoat.zorder(0)
+Gui.Form2.cmdAddCoat.position(100,700)
+Gui.Form2.cmdAddCoat.enabled(True)
+Gui.Form2.cmdAddCoat.fontname("Arial")
+Gui.Form2.cmdAddCoat.fontsize(8)
+Gui.Form2.cmdAddCoat.event(Click,cmdaddcoat_click)
+Gui.Form2.cmdAddCoat.defaultvalue("")
+Gui.Form2.cmdAddCoat.controlgroup(0)
+Gui.Form2.cmdDeleteCoat.create(button)
+Gui.Form2.cmdDeleteCoat.caption("Delete")
+Gui.Form2.cmdDeleteCoat.visible(True)
+Gui.Form2.cmdDeleteCoat.size(855,375)
+Gui.Form2.cmdDeleteCoat.zorder(0)
+Gui.Form2.cmdDeleteCoat.position(1100,700)
+Gui.Form2.cmdDeleteCoat.enabled(True)
+Gui.Form2.cmdDeleteCoat.fontname("Arial")
+Gui.Form2.cmdDeleteCoat.fontsize(8)
+Gui.Form2.cmdDeleteCoat.event(Click,cmddeletecoat_click)
+Gui.Form2.cmdDeleteCoat.defaultvalue("")
+Gui.Form2.cmdDeleteCoat.controlgroup(0)
+Gui.Form2.cmdBrwsCoat.create(button)
+Gui.Form2.cmdBrwsCoat.caption("^")
+Gui.Form2.cmdBrwsCoat.visible(True)
+Gui.Form2.cmdBrwsCoat.size(435,375)
+Gui.Form2.cmdBrwsCoat.zorder(0)
+Gui.Form2.cmdBrwsCoat.position(2405,300)
+Gui.Form2.cmdBrwsCoat.enabled(True)
+Gui.Form2.cmdBrwsCoat.fontname("Arial")
+Gui.Form2.cmdBrwsCoat.fontsize(8)
+Gui.Form2.cmdBrwsCoat.event(Click,cmdbrwscoat_click)
+Gui.Form2.cmdBrwsCoat.defaultvalue("")
+Gui.Form2.cmdBrwsCoat.controlgroup(0)
+Program.Sub.ScreenSU.End
+
+Program.Sub.Preflight.Start
+Variable.UDT.uCoating.Define("COAT",String,COAT)
+Variable.uGlobal.uCoating.Declare("uCoating")
+Variable.Global.bBusy.Declare(Boolean,false)
+Program.Sub.Preflight.End
+
+Program.Sub.Main.Start
+F.Intrinsic.Control.SetErrorHandler("Main_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+F.ODBC.Connection!conX.OpenConnection(V.Ambient.PDSN,V.Ambient.PUser,V.Ambient.PPass)
+
+F.Intrinsic.Control.CallSub(Loadscreen)
+
+Gui.Form1..Show
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Main_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4064_PART_LBL_MAINT.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.Main.End
+
+Program.Sub.cmdbrowspart_click.Start
+F.Intrinsic.Control.SetErrorHandler("cmdbrowspart_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+V.Local.sRet.Declare(String)
+
+F.Intrinsic.UI.SetBrowserHotTypeAhead(True)
+
+F.Intrinsic.UI.Browser(105,"",V.Local.sRet)
+F.Intrinsic.Control.If(V.Local.sRet,<>,"***CANCEL***")
+	F.Intrinsic.Control.CallSub(Cmdclear_click)
+	F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+	Gui.Form1.txtPart.Text(V.Local.sRet(0))
+	F.Intrinsic.Control.CallSub(Loadselection)
+	Gui.Form1.txtCut.SetFocus
+F.Intrinsic.Control.EndIf
+
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdbrowspart_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4064_PART_LBL_MAINT.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.cmdbrowspart_click.End
+
+Program.Sub.cmddelete_click.Start
+F.Intrinsic.Control.SetErrorHandler("cmddelete_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+V.Local.sSql.declare(String)
+
+F.Intrinsic.String.Build("delete from inventory_mst13 where part = '{0}'",V.Screen.Form1!txtPart.Text,V.Local.sSql)
+
+F.ODBC.Connection!conX.Execute(V.Local.sSql)
+
+F.Intrinsic.Control.CallSub(Cmdclear_click)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmddelete_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4064_PART_LBL_MAINT.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.cmddelete_click.End
+
+Program.Sub.cmdsave_click.Start
+F.Intrinsic.Control.SetErrorHandler("cmdsave_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+V.Local.sSql.declare(String)
+V.Local.sRet.Declare(String)
+
+F.Intrinsic.Control.CallSub(Checkblankvals)
+
+	F.Intrinsic.String.Build("Select * from inventory_mst13 where part = '{0}'",V.Screen.Form1!txtPart.Text,V.Local.sSql)
+	F.ODBC.Connection!conX.OpenRecordsetRW("rstSave",V.Local.sSql)
+	F.Intrinsic.Control.If(V.ODBC.conX!rstSave.EOF,<>,True)
+		F.ODBC.conX!rstSave.set!SHK_DIA(V.Screen.Form1!txtShank.Text)
+		F.ODBC.conX!rstSave.Set!NUM_FLT(V.Screen.Form1!txtFlutes.Text)
+		F.ODBC.conX!rstSave.Set!CUT_DIA(V.Screen.Form1!txtCut.Text)
+		F.ODBC.conX!rstSave.Set!LEN_CUT(V.Screen.Form1!txtLengthCut.Text)
+		F.ODBC.conX!rstSave.Set!RADIUS(V.Screen.Form1!txtRadAngle.Text)
+		F.ODBC.conX!rstSave.Set!OAL(V.Screen.Form1!txtOAL.Text)
+		F.ODBC.conX!rstSave.Set!COAT(V.Screen.Form1!ddlCoating.Text)
+		F.ODBC.conX!rstSave.Set!LBS_2(V.Screen.Form1!txtLbs.Text)
+		F.ODBC.conX!rstSave.Set!CPN(V.Screen.Form1!txtCPN.Text)
+		F.ODBC.conX!rstSave.Set!CPN_2(V.Screen.Form1!txtCPN_2.Text)
+		F.ODBC.conX!rstSave.Set!REV(V.Screen.Form1!txtREV.Text)
+		F.ODBC.conx!rstSave.Update
+
+
+	F.Intrinsic.Control.Else
+
+			F.Intrinsic.String.Build("insert into inventory_mst13 values('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}')",V.Screen.Form1!txtPart.Text,V.Screen.Form1!txtCut.Text,V.Screen.Form1!txtShank.Text,V.Screen.Form1!txtFlutes.Text,V.Screen.Form1!txtLengthCut.Text,V.Screen.Form1!txtRadAngle.Text,V.Screen.Form1!txtOAL.Text,V.Screen.Form1!ddlCoating.Text,V.Screen.Form1!txtLbs.Text,V.Screen.Form1!txtCPN.Text,V.Screen.Form1!txtCPN_2.Text,V.Screen.Form1!txtREV.Text,V.Local.sSql)
+			F.ODBC.Connection!conX.Execute(V.Local.sSql)
+	F.Intrinsic.Control.EndIf
+
+	F.ODBC.conX!rstSave.Close
+
+F.Intrinsic.Control.CallSub(Cmdclear_click)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdsave_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4064_PART_LBL_MAINT.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.cmdsave_click.End
+
+Program.Sub.cmdclear_click.Start
+F.Intrinsic.Control.SetErrorHandler("cmdclear_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+V.Global.bBusy.Set(True)
+
+Gui.Form1.txtPart.SetFocus
+Gui.Form1.txtCPN.Text("")
+Gui.Form1.txtCPN_2.Text("")
+Gui.Form1.txtCut.Text("")
+Gui.Form1.txtFlutes.Text("")
+Gui.Form1.txtLbs.Text("")
+Gui.Form1.txtLengthCut.Text("")
+Gui.Form1.txtOAL.Text("")
+Gui.Form1.txtPart.Text("")
+Gui.Form1.txtRadAngle.Text("")
+Gui.Form1.txtREV.Text("")
+Gui.Form1.txtShank.Text("")
+Gui.Form1.ddlCoating.ClearItems
+
+F.Intrinsic.Control.CallSub(Loadscreen)
+'F.Intrinsic.Debug.InvokeDebugger
+'
+'F.Intrinsic.Debug.Stop
+
+V.Global.bBusy.Set(False)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdclear_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4064_PART_LBL_MAINT.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.cmdclear_click.End
+
+Program.Sub.form1_unload.Start
+F.Intrinsic.Control.End
+
+Program.Sub.form1_unload.End
+
+Program.Sub.LoadSelection.Start
+F.Intrinsic.Control.SetErrorHandler("LoadSelection_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+V.Local.sSql.Declare(String)
+V.Local.sRet.Declare(String)
+
+V.Local.sRet.Set(V.Screen.Form1!txtPart.Text)
+	F.Intrinsic.Control.If(V.Local.sRet.Trim,<>,"")
+	F.Intrinsic.String.Build("Select PART, CUT_DIA,SHK_DIA,NUM_FLT,LEN_CUT,RADIUS,OAL,upper(COAT) as COAT,LBS_2,CPN,CPN_2,REV from INVENTORY_MST13 where PART = '{0}'",V.Local.sRet,V.Local.sSql)
+	F.ODBC.Connection!conX.OpenRecordsetRO("rst",V.Local.sSql)
+	F.Intrinsic.Control.If(V.ODBC.conX!rst.EOF,<>,True)
+		Gui.Form1.txtCPN.Text(V.ODBC.conX!rst.FieldValTrim!CPN)
+		Gui.Form1.txtCPN_2.Text(V.ODBC.conX!rst.FieldValTrim!CPN_2)
+		Gui.Form1.txtCut.Text(V.ODBC.conX!rst.FieldVal!CUT_DIA)
+		Gui.Form1.txtFlutes.Text(V.ODBC.conX!rst.FieldValTrim!NUM_FLT)
+		Gui.Form1.txtLbs.Text(V.ODBC.conX!rst.FieldValTrim!LBS_2)
+		Gui.Form1.txtLengthCut.Text(V.ODBC.conX!rst.FieldValTrim!LEN_CUT)
+		Gui.Form1.txtOAL.Text(V.ODBC.conX!rst.FieldValTrim!OAL)
+		Gui.Form1.txtRadAngle.Text(V.ODBC.conX!rst.FieldValTrim!RADIUS)
+		Gui.Form1.txtREV.Text(V.ODBC.conX!rst.FieldValTrim!REV)
+		Gui.Form1.txtShank.Text(V.ODBC.conX!rst.FieldValTrim!SHK_DIA)
+		Gui.Form1.ddlCoating.Text(V.ODBC.conX!rst.FieldValTrim!COAT)
+	F.Intrinsic.Control.EndIf
+
+	F.ODBC.conX!rst.Close
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("LoadSelection_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4064_PART_LBL_MAINT.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.LoadSelection.End
+
+Program.Sub.txtpart_lostfocus.Start
+F.Intrinsic.Control.SetErrorHandler("txtpart_lostfocus_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+F.Intrinsic.Control.CallSub(Loadselection)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("txtpart_lostfocus_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4064_PART_LBL_MAINT.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.txtpart_lostfocus.End
+
+Program.Sub.LoadScreen.Start
+F.Intrinsic.Control.SetErrorHandler("LoadScreen_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.bExists.Declare(Boolean)
+
+V.Local.i.Declare(Float)
+
+V.uGlobal.uCoating.Redim(-1,-1)
+
+'F.Intrinsic.Debug.Stop
+
+F.ODBC.Connection!conX.OpenRecordsetRO("rst","select distinct upper(COAT) as COAT from inventory_mst13 union select distinct upper(COAT) as COAT from GCG_4064_COATING")
+F.Intrinsic.Control.If(V.ODBC.conX!rst.EOF,<>,True)
+	F.Intrinsic.Variable.LoadUDTFromRecordset("conX","rst","V.uGlobal.uCoating",False)
+F.intrinsic.control.endif
+
+F.ODBC.conX!rst.Close
+
+F.Intrinsic.Variable.UDTMultiFlagDuplicates(V.uGlobal.uCoating!COAT)
+
+F.Intrinsic.Variable.UDTDeleteFlagged(V.uGlobal.uCoating)
+
+Gui.Form1.ddlCoating.ClearItems
+F.Intrinsic.Control.For(V.Local.i,V.uGlobal.uCoating.LBound,V.uGlobal.uCoating.UBound,1)
+	Gui.Form1.ddlCoating.AddItem(V.uGlobal.uCoating(v.Local.i)!COAT)
+F.Intrinsic.Control.Next(V.Local.i)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("LoadScreen_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4064_PART_LBL_MAINT.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.LoadScreen.End
+
+Program.Sub.checkBlankVals.Start
+F.Intrinsic.Control.SetErrorHandler("checkBlankVals_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sRet.Declare(String)
+
+'this sub sets screen values to '---' where they are blank
+V.Local.sRet.Set(V.Screen.Form1!txtCPN.Text)
+F.Intrinsic.Control.If(V.Local.sRet.Trim,=,"")
+	Gui.Form1.txtCPN.Text("---")
+F.Intrinsic.Control.EndIf
+
+V.Local.sRet.Set(V.Screen.Form1!txtCPN_2.Text)
+F.Intrinsic.Control.If(V.Local.sRet.Trim,=,"")
+	Gui.Form1.txtCPN_2.text("---")
+F.Intrinsic.Control.EndIf
+
+V.Local.sRet.Set(V.Screen.Form1!txtCut.Text)
+F.Intrinsic.Control.If(V.Local.sRet.Trim,=,"")
+	Gui.Form1.txtCut.Text("---")
+F.Intrinsic.Control.EndIf
+
+V.Local.sRet.Set(V.Screen.Form1!txtFlutes.Text)
+F.Intrinsic.Control.If(V.Local.sRet.Trim,=,"")
+	Gui.Form1.txtFlutes.Text("---")
+F.Intrinsic.Control.EndIf
+
+V.Local.sRet.Set(V.Screen.Form1!txtLbs.Text)
+F.Intrinsic.Control.If(V.Local.sRet.Trim,=,"")
+	Gui.Form1.txtLbs.Text("---")
+F.Intrinsic.Control.EndIf
+
+V.Local.sRet.Set(V.Screen.Form1!txtLengthCut.Text)
+F.Intrinsic.Control.If(V.Local.sRet.Trim,=,"")
+	Gui.Form1.txtLengthCut.Text("---")
+F.Intrinsic.Control.EndIf
+
+V.Local.sRet.Set(V.Screen.Form1!txtOAL.Text)
+F.Intrinsic.Control.If(V.Local.sRet.Trim,=,"")
+	Gui.Form1.txtOAL.Text("---")
+F.Intrinsic.Control.EndIf
+
+V.Local.sRet.Set(V.Screen.Form1!txtRadAngle.Text)
+F.Intrinsic.Control.If(V.Local.sRet.Trim,=,"")
+	Gui.Form1.txtRadAngle.Text("---")
+F.Intrinsic.Control.EndIf
+
+V.Local.sRet.Set(V.Screen.Form1!txtREV.Text)
+F.Intrinsic.Control.If(V.Local.sRet.Trim,=,"")
+	Gui.Form1.txtREV.Text("---")
+F.Intrinsic.Control.EndIf
+
+V.Local.sRet.Set(V.Screen.Form1!txtShank.Text)
+F.Intrinsic.Control.If(V.Local.sRet.Trim,=,"")
+	Gui.Form1.txtShank.Text("---")
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.If(V.Screen.Form1!ddlCoating.Text,=,"")
+	Gui.Form1.ddlCoating.Text("UNCOATED")
+F.Intrinsic.Control.EndIf
+
+
+
+
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("checkBlankVals_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4064_PART_LBL_MAINT.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.checkBlankVals.End
+
+Program.Sub.txtcut_lostfocus.Start
+F.Intrinsic.Control.SetErrorHandler("txtcut_lostfocus_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+
+V.Local.sRet.Declare(String)
+'
+'F.Intrinsic.Control.If(V.Global.bBusy,=,True)
+'	F.Intrinsic.Control.ExitSub
+'F.Intrinsic.Control.EndIf
+
+V.Local.sRet.Set(V.Screen.Form1!txtCut.Text)
+F.Intrinsic.Control.If(V.Local.sRet.Trim,<>,"---")
+	F.Intrinsic.Control.CallSub("Convert2decimal","ret",V.Local.sRet.Trim)
+
+	Gui.Form1.txtCut.Text(V.Args.Result)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("txtcut_lostfocus_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4064_PART_LBL_MAINT.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.txtcut_lostfocus.End
+
+Program.Sub.txtshank_lostfocus.Start
+F.Intrinsic.Control.SetErrorHandler("txtshank_lostfocus_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+V.Local.sRet.Declare(String)
+
+V.Local.sRet.Set(V.Screen.Form1!txtShank.Text)
+
+F.Intrinsic.Control.If(V.Local.sRet,<>,"---")
+	F.Intrinsic.Control.CallSub("Convert2decimal","ret",V.Local.sRet.Trim)
+
+	Gui.Form1.txtShank.Text(V.Args.Result)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("txtshank_lostfocus_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4064_PART_LBL_MAINT.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.txtshank_lostfocus.End
+
+Program.Sub.txtflutes_lostfocus.Start
+F.Intrinsic.Control.SetErrorHandler("txtflutes_lostfocus_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+V.Local.sRet.Declare(String)
+
+V.Local.sRet.Set(V.Screen.Form1!txtFlutes.Text)
+F.Intrinsic.Control.If(V.Local.sRet.Trim,<>,"---")
+	F.Intrinsic.Control.CallSub("Convert2decimal","ret",V.Local.sRet.Trim)
+
+	Gui.Form1.txtflutes.Text(V.Args.Result)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("txtflutes_lostfocus_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4064_PART_LBL_MAINT.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.txtflutes_lostfocus.End
+
+Program.Sub.txtlengthcut_lostfocus.Start
+F.Intrinsic.Control.SetErrorHandler("txtlengthcut_lostfocus_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+V.Local.iNum.Declare(Float)
+V.Local.iDenom.Declare(Float)
+V.Local.iRet.Declare(Float)
+V.Local.sRet.Declare(String)
+V.Local.sret2.Declare(String)
+V.Local.bExists.Declare(Boolean)
+
+
+V.Local.sRet.Set(V.Screen.Form1!txtlengthcut.Text)
+F.Intrinsic.String.IsInString(V.Local.sRet.Trim,"/",True,V.Local.bExists)
+F.Intrinsic.Control.If(V.Local.bExists,=,True)
+	F.Intrinsic.String.Split(V.Local.sRet,"/",V.Local.sRet)
+	F.Intrinsic.Math.ConvertToFloat(V.Local.sRet(0).Trim,V.Local.iNum)
+	F.Intrinsic.Math.ConvertToFloat(V.Local.sRet(1).Trim,V.Local.iDenom)
+	F.Intrinsic.Math.Div(V.Local.iNum,V.Local.iDenom,V.Local.iRet)
+	F.Intrinsic.Math.Round(V.Local.iRet,4,V.Local.iRet)
+	F.Intrinsic.String.ConvertToString(V.Local.iRet,V.Local.sRet)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.String.IsInString(V.Local.sRet.Trim,".",True,V.Local.bExists)
+F.Intrinsic.Control.If(V.Local.bExists,=,True)
+	F.Intrinsic.String.Split(V.Local.sRet.Trim,".",V.Local.sRet)
+	F.Intrinsic.String.RPad(V.Local.sRet(1).Trim,"0",4,V.Local.sret2)
+	F.Intrinsic.Control.If(V.Local.sRet(0),=,"0")
+		F.Intrinsic.String.Concat(".",V.Local.sret2,V.Local.sRet)
+	F.Intrinsic.Control.Else
+		F.Intrinsic.String.Concat(V.Local.sRet(0).Trim,".",V.Local.sRet2.Trim,V.Local.sRet)
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndIf
+
+Gui.Form1.txtlengthcut.Text(V.Local.sRet.Trim)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("txtlengthcut_lostfocus_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4064_PART_LBL_MAINT.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.txtlengthcut_lostfocus.End
+
+Program.Sub.txtradangle_lostfocus.Start
+F.Intrinsic.Control.SetErrorHandler("txtradangle_lostfocus_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+V.Local.iNum.Declare(Float)
+V.Local.iDenom.Declare(Float)
+V.Local.iRet.Declare(Float)
+V.Local.sRet.Declare(String)
+V.Local.sret2.Declare(String)
+V.Local.bExists.Declare(Boolean)
+
+
+V.Local.sRet.Set(V.Screen.Form1!txtRadAngle.Text)
+F.Intrinsic.String.IsInString(V.Local.sRet.Trim,"/",True,V.Local.bExists)
+F.Intrinsic.Control.If(V.Local.bExists,=,True)
+	F.Intrinsic.String.Split(V.Local.sRet,"/",V.Local.sRet)
+	F.Intrinsic.Math.ConvertToFloat(V.Local.sRet(0).Trim,V.Local.iNum)
+	F.Intrinsic.Math.ConvertToFloat(V.Local.sRet(1).Trim,V.Local.iDenom)
+	F.Intrinsic.Math.Div(V.Local.iNum,V.Local.iDenom,V.Local.iRet)
+	F.Intrinsic.Math.Round(V.Local.iRet,3,V.Local.iRet)
+	F.Intrinsic.String.ConvertToString(V.Local.iRet,V.Local.sRet)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.String.IsInString(V.Local.sRet.Trim,".",True,V.Local.bExists)
+F.Intrinsic.Control.If(V.Local.bExists,=,True)
+	F.Intrinsic.String.Split(V.Local.sRet.Trim,".",V.Local.sRet)
+	F.Intrinsic.String.RPad(V.Local.sRet(1).Trim,"0",3,V.Local.sret2)
+	F.Intrinsic.Control.If(V.Local.sRet(0),=,"0")
+		F.Intrinsic.String.Concat(".",V.Local.sret2,V.Local.sRet)
+	F.Intrinsic.Control.Else
+		F.Intrinsic.String.Concat(V.Local.sRet(0).Trim,".",V.Local.sRet2.Trim,V.Local.sRet)
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndIf
+
+Gui.Form1.txtRadAngle.Text(V.Local.sRet.Trim)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("txtradangle_lostfocus_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4064_PART_LBL_MAINT.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.txtradangle_lostfocus.End
+
+Program.Sub.txtoal_lostfocus.Start
+F.Intrinsic.Control.SetErrorHandler("txtoal_lostfocus_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+V.Local.iNum.Declare(Float)
+V.Local.iDenom.Declare(Float)
+V.Local.iRet.Declare(Float)
+V.Local.sRet.Declare(String)
+V.Local.sret2.Declare(String)
+V.Local.bExists.Declare(Boolean)
+
+
+V.Local.sRet.Set(V.Screen.Form1!txtOAL.Text)
+F.Intrinsic.String.IsInString(V.Local.sRet.Trim,"/",True,V.Local.bExists)
+F.Intrinsic.Control.If(V.Local.bExists,=,True)
+	F.Intrinsic.String.Split(V.Local.sRet,"/",V.Local.sRet)
+	F.Intrinsic.Math.ConvertToFloat(V.Local.sRet(0).Trim,V.Local.iNum)
+	F.Intrinsic.Math.ConvertToFloat(V.Local.sRet(1).Trim,V.Local.iDenom)
+	F.Intrinsic.Math.Div(V.Local.iNum,V.Local.iDenom,V.Local.iRet)
+	F.Intrinsic.Math.Round(V.Local.iRet,2,V.Local.iRet)
+	F.Intrinsic.String.ConvertToString(V.Local.iRet,V.Local.sRet)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.String.IsInString(V.Local.sRet.Trim,".",True,V.Local.bExists)
+F.Intrinsic.Control.If(V.Local.bExists,=,True)
+	F.Intrinsic.String.Split(V.Local.sRet.Trim,".",V.Local.sRet)
+	F.Intrinsic.String.RPad(V.Local.sRet(1).Trim,"0",2,V.Local.sret2)
+	F.Intrinsic.Control.If(V.Local.sRet(0),=,"0")
+		F.Intrinsic.String.Concat(".",V.Local.sret2,V.Local.sRet)
+	F.Intrinsic.Control.Else
+		F.Intrinsic.String.Concat(V.Local.sRet(0).Trim,".",V.Local.sRet2.Trim,V.Local.sRet)
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndIf
+
+Gui.Form1.txtOAL.Text(V.Local.sRet.Trim)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("txtoal_lostfocus_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4064_PART_LBL_MAINT.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.txtoal_lostfocus.End
+
+Program.Sub.txtlbs_lostfocus.Start
+F.Intrinsic.Control.SetErrorHandler("txtlbs_lostfocus_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+V.Local.sRet.Declare(String)
+
+V.Local.sRet.Set(V.Screen.Form1!txtlbs.Text)
+
+F.Intrinsic.Control.If(V.Local.sRet.Trim,<>,"---")
+	F.Intrinsic.Control.CallSub("Convert2decimal","ret",V.Local.sRet.Trim)
+
+	Gui.Form1.txtlbs.Text(V.Args.Result)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("txtlbs_lostfocus_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4064_PART_LBL_MAINT.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.txtlbs_lostfocus.End
+
+Program.Sub.Convert2Decimal.Start
+F.Intrinsic.Control.SetErrorHandler("Convert2Decimal_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+'sub converts entries into decimals rounded to 4 places
+V.Local.iNum.Declare(Float)
+V.Local.iDenom.Declare(Float)
+V.Local.iRet.Declare(Float)
+V.Local.sRet.Declare(String)
+V.Local.sret2.Declare(String)
+V.Local.bExists.Declare(Boolean)
+
+
+V.Local.sRet.Set(V.Args.ret)
+F.Intrinsic.Control.If(V.Local.sRet,<>,"---")
+
+	F.Intrinsic.String.IsInString(V.Local.sRet.Trim,"/",True,V.Local.bExists)
+	F.Intrinsic.Control.If(V.Local.bExists,=,True)
+		F.Intrinsic.String.Split(V.Local.sRet,"/",V.Local.sRet)
+		F.Intrinsic.Math.ConvertToFloat(V.Local.sRet(0).Trim,V.Local.iNum)
+		F.Intrinsic.Math.ConvertToFloat(V.Local.sRet(1).Trim,V.Local.iDenom)
+		F.Intrinsic.Math.Div(V.Local.iNum,V.Local.iDenom,V.Local.iRet)
+		F.Intrinsic.Math.Round(V.Local.iRet,4,V.Local.iRet)
+		F.Intrinsic.String.ConvertToString(V.Local.iRet,V.Local.sRet)
+	F.Intrinsic.Control.EndIf
+
+	F.Intrinsic.String.IsInString(V.Local.sRet.Trim,".",True,V.Local.bExists)
+	F.Intrinsic.Control.If(V.Local.bExists,=,True)
+		F.Intrinsic.String.Split(V.Local.sRet.Trim,".",V.Local.sRet)
+		F.Intrinsic.String.RPad(V.Local.sRet(1).Trim,"0",4,V.Local.sret2)
+		F.Intrinsic.Control.If(V.Local.sRet(0),=,"0")
+			F.Intrinsic.String.Concat(".",V.Local.sret2,V.Local.sRet)
+		F.Intrinsic.Control.Else
+			F.Intrinsic.String.Concat(V.Local.sRet(0).Trim,".",V.Local.sRet2.Trim,V.Local.sRet)
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.EndIf
+
+	F.Intrinsic.Variable.AddRV("Result",V.Local.sRet)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Convert2Decimal_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4064_PART_LBL_MAINT.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.Convert2Decimal.End
+
+Program.Sub.txtcut_gotfocus.Start
+Gui.Form1.txtCut.SelectAll
+
+
+Program.Sub.txtcut_gotfocus.End
+
+Program.Sub.txtshank_gotfocus.Start
+Gui.Form1.txtShank.SelectAll
+
+
+Program.Sub.txtshank_gotfocus.End
+
+Program.Sub.txtflutes_gotfocus.Start
+Gui.Form1.txtFlutes.SelectAll
+
+
+Program.Sub.txtflutes_gotfocus.End
+
+Program.Sub.txtlengthcut_gotfocus.Start
+Gui.Form1.txtLengthCut.SelectAll
+
+Program.Sub.txtlengthcut_gotfocus.End
+
+Program.Sub.txtradangle_gotfocus.Start
+Gui.Form1.txtRadAngle.selectall
+
+
+Program.Sub.txtradangle_gotfocus.End
+
+Program.Sub.txtoal_gotfocus.Start
+Gui.Form1.txtOAL.SelectAll
+
+Program.Sub.txtoal_gotfocus.End
+
+Program.Sub.txtlbs_gotfocus.Start
+Gui.Form1.txtLbs.SelectAll
+
+Program.Sub.txtlbs_gotfocus.End
+
+Program.Sub.txtcpn_gotfocus.Start
+Gui.Form1.txtCPN.SelectAll
+
+Program.Sub.txtcpn_gotfocus.End
+
+Program.Sub.txtcpn_2_gotfocus.Start
+Gui.Form1.txtCPN_2.SelectAll
+
+
+Program.Sub.txtcpn_2_gotfocus.End
+
+Program.Sub.txtrev_gotfocus.Start
+gui.Form1.txtREV.SelectAll
+
+Program.Sub.txtrev_gotfocus.End
+
+Program.Sub.cmdaddcoat_click.Start
+F.Intrinsic.Control.SetErrorHandler("cmdaddcoat_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sRet.Declare(String)
+V.Local.sSql.Declare(String)
+
+V.Local.sRet.Set(V.Screen.Form2!txtCoat.Text)
+F.Intrinsic.String.Build("select * from GCG_4064_COATING where coat = '{0}'",V.Local.sRet.Trim,V.Local.sSql)
+
+F.ODBC.Connection!conX.OpenRecordsetRW("rst",V.Local.sSql)
+F.Intrinsic.Control.If(V.ODBC.conX!rst.EOF,=,True)
+	F.Intrinsic.String.Build("insert into GCG_4064_COATING values('{0}')",V.Local.sRet.Trim,V.Local.sSql)
+	F.ODBC.Connection!conX.Execute(V.Local.sSql)
+F.Intrinsic.Control.Else
+	F.Intrinsic.UI.Msgbox("Coating Exists","Dupliate Record")
+	Gui.Form2.txtCoat.SelectAll
+F.Intrinsic.Control.EndIf
+F.ODBC.conX!rst.Close
+
+F.Intrinsic.Control.CallSub(Loadscreen)
+
+Gui.Form2.txtCoat.Text("")
+
+Gui.Form2.txtCoat.SetFocus
+
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdaddcoat_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4064_PART_LBL_MAINT.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.cmdaddcoat_click.End
+
+Program.Sub.cmddeletecoat_click.Start
+F.Intrinsic.Control.SetErrorHandler("cmddeletecoat_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+V.Local.sSql.Declare(String)
+V.Local.sRet.Declare(String)
+
+V.Local.sRet.Set(V.Screen.Form2!txtCoat.Text)
+
+F.Intrinsic.String.Build("Delete from GCG_4064_COATING where COAT = '{0}'",V.Local.sRet.Trim,V.Local.sSql)
+F.ODBC.Connection!conX.Execute(V.Local.sSql)
+
+Gui.Form2.txtCoat.Text("")
+
+Gui.Form2.txtCoat.SetFocus
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmddeletecoat_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4064_PART_LBL_MAINT.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.cmddeletecoat_click.End
+
+Program.Sub.cmdbrwscoat_click.Start
+F.Intrinsic.Control.SetErrorHandler("cmdbrwscoat_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+V.Local.sSQL.Declare(String)
+V.Local.sCol.Declare(String)
+V.Local.sColW.Declare(String)
+V.Local.sRet.Declare(String)
+
+'Pass SQL Query
+V.Local.sSQL.Set("select distinct  COAT as COAT from GCG_4064_COATING")
+'Split Column Names into an array (VAR1, VAR2)
+F.Intrinsic.String.Split("Coating","*!*",V.Local.sCol)
+'Split Column widths into an array
+F.Intrinsic.String.Split("8000","*!*",V.Local.sColW)
+
+'Enter prompt (VAR3), e.g., "Selct a part"
+F.Intrinsic.UI.Browser("Select a Coating","conX",V.Local.sSQL,V.Local.sCol,V.Local.sColW,V.Local.sRet)
+F.Intrinsic.Control.If(V.Local.sRet,<>,"***CANCEL***")
+	Gui.Form2.txtCoat.Text(V.Local.sRet)
+F.Intrinsic.Control.EndIf
+
+
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdbrwscoat_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4064_PART_LBL_MAINT.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.cmdbrwscoat_click.End
+
+Program.Sub.cmdaddcoatscreen_click.Start
+F.Intrinsic.Control.SetErrorHandler("cmdaddcoatscreen_click_Err")
+F.Intrinsic.Control.ClearErrors
+'ERROR HANDLING ABOVE
+
+'DECLARE VARIABLES
+V.Local.sError.Declare(String)
+
+
+Gui.Form2..Show
+
+Gui.Form2.txtCoat.SetFocus
+
+'TERMINATE SUBROUTINE
+F.Intrinsic.Control.ExitSub
+
+'ERROR HANDLING BELOW
+F.Intrinsic.Control.Label("cmdaddcoatscreen_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4064_PART_LBL_MAINT.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.cmdaddcoatscreen_click.End
+
+Program.Sub.form2_unload.Start
+Gui.Form2..Visible(false)
+
+Program.Sub.form2_unload.End
+
+Program.Sub.Comments.Start
+${$0$}$GCG_4090_OpenOrderWOReviewMaint$}$BCC$}$6/8/2016$}$False
+${$3$}$0$}$$}$-1$}$-1$}$$}$1/1/1900$}$Updates table data for Dashboard.
+Program.Sub.Comments.End
